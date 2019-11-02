@@ -1,0 +1,39 @@
+{
+    "name": "ProductInfo",
+    "fields": [
+        {
+            "fieldName": "productName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "productStatus",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "originPrice",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "discountInfo",
+            "otherEntityRelationshipName": "productInfo",
+            "relationshipName": "discountInfo",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20191101161631",
+    "entityTableName": "product_info",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

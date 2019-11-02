@@ -1,0 +1,25 @@
+{
+  "examBackstageApp": {
+    "discountInfo": {
+      "home": {
+        "title": "Discount Infos",
+        "createLabel": "创建新 Discount Info",
+        "createOrEditLabel": "创建或编辑 Discount Info",
+        "notFound": "No Discount Infos found"
+      },
+      "created": "Discount Info {{ param }} 创建成功",
+      "updated": "Discount Info {{ param }} 更新成功",
+      "deleted": "Discount Info {{ param }} 删除成功",
+      "delete": {
+        "question": "你确定要删除 Discount Info {{ id }} 吗？"
+      },
+      "detail": {
+        "title": "Discount Info"
+      },
+      "discountName": "Discount Name",
+      "discountType": "Discount Type",
+      "discountValue": "Discount Value",
+      "discountStatus": "Discount Status"
+    }
+  }
+}

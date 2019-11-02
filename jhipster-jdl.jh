@@ -1,0 +1,30 @@
+
+entity DiscountInfo {
+	discountName String,
+    discountType String,
+    discountValue Integer,
+    discountStatus String
+}
+
+entity ProductInfo {
+	productName String,
+    productType String,
+    productStatus String,
+	originPrice Integer
+}
+
+relationship ManyToOne {
+	ProductInfo{discountInfo} to DiscountInfo
+}
+
+// Set pagination options
+paginate all with pagination
+
+// Use Data Transfert Objects (DTO)
+// dto * with mapstruct
+
+// Set service options to all except few
+service all with serviceImpl
+
+// Set an angular suffix
+// angularSuffix * with mySuffix

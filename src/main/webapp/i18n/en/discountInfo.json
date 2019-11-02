@@ -1,0 +1,25 @@
+{
+  "examBackstageApp": {
+    "discountInfo": {
+      "home": {
+        "title": "Discount Infos",
+        "createLabel": "Create a new Discount Info",
+        "createOrEditLabel": "Create or edit a Discount Info",
+        "notFound": "No Discount Infos found"
+      },
+      "created": "A new Discount Info is created with identifier {{ param }}",
+      "updated": "A Discount Info is updated with identifier {{ param }}",
+      "deleted": "A Discount Info is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Discount Info {{ id }}?"
+      },
+      "detail": {
+        "title": "Discount Info"
+      },
+      "discountName": "Discount Name",
+      "discountType": "Discount Type",
+      "discountValue": "Discount Value",
+      "discountStatus": "Discount Status"
+    }
+  }
+}

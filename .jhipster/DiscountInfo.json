@@ -1,0 +1,31 @@
+{
+    "name": "DiscountInfo",
+    "fields": [
+        {
+            "fieldName": "discountName",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "discountType",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "discountValue",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "discountStatus",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20191101161630",
+    "entityTableName": "discount_info",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "applications": "*"
+}

@@ -1,0 +1,51 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-product-info-heading" jhiTranslate="examBackstageApp.productInfo.home.createOrEditLabel">Create or edit a Product Info</h2>
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+                <div class="form-group" [hidden]="!editForm.get('id').value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id"
+                        readonly />
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examBackstageApp.productInfo.productName" for="field_productName">Product Name</label>
+                    <input type="text" class="form-control" name="productName" id="field_productName"
+                           formControlName="productName"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examBackstageApp.productInfo.productType" for="field_productType">Product Type</label>
+                    <input type="text" class="form-control" name="productType" id="field_productType"
+                           formControlName="productType"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examBackstageApp.productInfo.productStatus" for="field_productStatus">Product Status</label>
+                    <input type="text" class="form-control" name="productStatus" id="field_productStatus"
+                           formControlName="productStatus"/>
+                </div>
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examBackstageApp.productInfo.originPrice" for="field_originPrice">Origin Price</label>
+                    <input type="number" class="form-control" name="originPrice" id="field_originPrice"
+                           formControlName="originPrice"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="examBackstageApp.productInfo.discountInfo" for="field_discountInfo">Discount Info</label>
+                    <select class="form-control" id="field_discountInfo" name="discountInfo" formControlName="discountInfo">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="discountInfoOption.id === editForm.get('discountInfo').value?.id ? editForm.get('discountInfo').value : discountInfoOption" *ngFor="let discountInfoOption of discountinfos; trackBy: trackDiscountInfoById">{{discountInfoOption.id}}</option>
+                    </select>
+                </div>
+            </div>
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary"  (click)="previousState()">
+                    <fa-icon [icon]="'ban'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon [icon]="'save'"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
